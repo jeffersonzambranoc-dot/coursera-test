@@ -1,0 +1,134 @@
+/* Reset básico y variables */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primario: #1a5276;
+    --color-secundario: #2e86c1;
+    --color-fondo: #f8f9fa;
+    --color-texto: #333333;
+    --color-blanco: #ffffff;
+    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --max-ancho: 960px;
+}
+
+/* Cuerpo y tipografía */
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+    background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+    color: var(--color-blanco);
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+header h2 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+/* Navegación */
+nav {
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 0.8rem 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Contenido principal */
+main {
+    max-width: var(--max-ancho);
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    background-color: var(--color-blanco);
+    padding: 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+section h3 {
+    color: var(--color-primario);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    border-bottom: 2px solid var(--color-secundario);
+    padding-bottom: 0.5rem;
+}
+
+section h4 {
+    color: var(--color-primario);
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+section p {
+    margin-bottom: 0.8rem;
+}
+
+/* Pie de página */
+footer {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+}
+
+/* Diseño responsivo */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    section {
+        padding: 1rem 1.2rem;
+    }
+}
